@@ -1,4 +1,6 @@
 data/SOC/*.csv
+data/SOC
+data/
 
 # Arquivos gerados
 outputs/models/*
