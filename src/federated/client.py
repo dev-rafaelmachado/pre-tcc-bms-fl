@@ -8,10 +8,6 @@ import os
 from sklearn.linear_model import SGDRegressor
 from sklearn.metrics import mean_squared_error
 
-# Adicionar caminho do projeto
-sys.path.insert(0, os.path.abspath(
-    os.path.join(os.path.dirname(__file__), '../..')))
-
 
 class SklearnClient(fl.client.NumPyClient):
     def __init__(self, client_id, model, X, y):

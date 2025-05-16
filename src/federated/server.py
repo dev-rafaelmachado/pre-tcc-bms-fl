@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import os
 from sklearn.metrics import mean_squared_error
 
-from src.utils.consts import MODELS_PATH, PLOTS_PATH, SOC_PATH
+from src.utils.consts import MODELS_PATH, PLOTS_PATH, ROUNDS, SOC_PATH
 
 os.makedirs(MODELS_PATH, exist_ok=True)
 os.makedirs(PLOTS_PATH, exist_ok=True)
@@ -66,7 +66,7 @@ if __name__ == "__main__":
 
     fl.server.start_server(
         server_address="localhost:8080",
-        config=fl.server.ServerConfig(num_rounds=5000),
+        config=fl.server.ServerConfig(num_rounds=ROUNDS),
         strategy=strategy,
     )
 
